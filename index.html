@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Weather App</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="tables.html">Tables</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <header>
+                <div class="search-bar">
+                    <input type="text" id="city-input" placeholder="Enter city name">
+                    <button id="search-button">Get Weather</button>
+                </div>
+                <div class="user-profile">
+                    <span>Usaid Afzal</span>
+                    <img src="user-profile.jpg" alt="User Profile">
+                </div>
+            </header>
+            <div class="weather-widget" id="weather-widget">
+                <h2>Weather in <span id="city-name">City</span></h2>
+                <p id="weather-condition">Condition: N/A</p>
+                <p id="temperature">Temperature: N/A</p>
+                <p id="humidity">Humidity: N/A</p>
+            </div>
+            <div class="charts-container">
+                <div class="chart">
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

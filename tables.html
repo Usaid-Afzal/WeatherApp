@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Tables</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Weather App</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="tables.html" class="active">Tables</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <header>
+                <div class="search-bar">
+                    <input type="text" id="city-input" placeholder="Enter city name">
+                    <button id="search-button">Get Weather</button>
+                </div>
+                <div class="user-profile">
+                    <span>Usaid Afzal</span>
+                    <img src="user-profile.jpg" alt="User Profile">
+                </div>
+            </header>
+            <div class="content-wrapper">
+                <div class="table-container">
+                    <h2>Temperature Forecast</h2>
+                    <div class="filter-buttons">
+                        <button id="rainy-days-button" class="page-button">Show Rainy Days</button>
+                        <button id="highest-temp-button" class="page-button">Highest Temperature Day</button>
+                        <button id="sort-desc-button" class="page-button">Sort Descending</button>
+                        <button id="sort-asc-button" class="page-button">Sort Ascending</button>
+                        <button id="reset-filters-button" class="page-button">Reset Filters</button>
+                    </div>
+                    <table id="forecast-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Condition</th>
+                                <th>Temperature (°C)</th>
+                                <th>Humidity (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Weather data will be injected here -->
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <button class="page-button" id="prev-button">Previous</button>
+                        <span id="page-info"></span>
+                        <button class="page-button" id="next-button">Next</button>
+                    </div>
+                </div>
+                <div class="chatbot-container">
+                    <h2>Weather Chatbot</h2>
+                    <div id="chat-area">
+                        <!-- Chat responses will appear here -->
+                    </div>
+                    <form id="chat-form">
+                        <input type="text" id="chat-input" placeholder="Ask me something..." autocomplete="off">
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
